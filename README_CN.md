@@ -1,5 +1,18 @@
 <img width=100% src="docs/assets/flycv.png"/>
 
+## 如何编译？
+
+### 静态库编译
+
+```
+$ mkdir build
+$ cd build
+$ cmake .. -DCMAKE_INSTALL_PREFIX=../dist -DBUILD_BENCHMARK=ON
+$ make install
+$ cd benchmark
+$ ./flycv_bench
+```
+
 **[English](README_EN.md)** | **简体中文**
 
 ## 🔥 FlyCV —— 高性能计算机图像系统
