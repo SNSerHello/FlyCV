@@ -12,6 +12,7 @@ $ cmake .. \
   -DWITH_LIB_JPEG_TURBO=OFF \
   -DWITH_LIB_PNG=OFF \
   -DBUILD_BENCHMARK=ON
+$ make -j
 $ make install
 $ cd benchmark
 $ ./flycv_bench
@@ -29,6 +30,7 @@ $ cmake .. \
   -DWITH_LIB_PNG=OFF \
   -DCMAKE_INSTALL_PREFIX=../dist \
   -DBUILD_BENCHMARK=ON
+$ make -j
 $ make install
 $ cd benchmark
 $ ./flycv_bench
