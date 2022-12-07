@@ -7,11 +7,33 @@
 ```
 $ mkdir build
 $ cd build
-$ cmake .. -DCMAKE_INSTALL_PREFIX=../dist -DBUILD_BENCHMARK=ON
+$ cmake .. \
+  -DCMAKE_INSTALL_PREFIX=../dist \
+  -DWITH_LIB_JPEG_TURBO=OFF \
+  -DWITH_LIB_PNG=OFF \
+  -DBUILD_BENCHMARK=ON
 $ make install
 $ cd benchmark
 $ ./flycv_bench
 ```
+
+### 动态库编译
+
+```
+$ mkdir build
+$ cd build
+$ cmake .. \
+  -DBUILD_SHARED_LIBS=ON \
+  -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+  -DWITH_LIB_JPEG_TURBO=OFF \
+  -DWITH_LIB_PNG=OFF \
+  -DCMAKE_INSTALL_PREFIX=../dist \
+  -DBUILD_BENCHMARK=ON
+$ make install
+$ cd benchmark
+$ ./flycv_bench
+```
+
 
 **[English](README_EN.md)** | **简体中文**
 
